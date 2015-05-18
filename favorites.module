@@ -1,0 +1,48 @@
+<?php
+
+function favorites_menu() {
+    $items = array();
+    $items['fav_movies'] = array(
+        'title' => 'Favorite Movies',
+        'page callback' => 'show_movies',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    $items['fav_songs'] = array(
+        'title' => 'Favorite Songs',
+        'page callback' => 'show_songs',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    $items['fav_books'] = array(
+        'title' => 'Favorite Books',
+        'page callback' => 'show_books',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+
+function show_movies(){
+    return "<ul>
+                <li>The Big Lebowski</li>
+                <li>Burn After Reading</li>
+                <li>Fargo</li>
+            </ul>";
+}
+
+function show_songs(){
+    return "<ul>
+                <li>Somewhere in the Between - Streetlight Manifesto</li>
+                <li>Pleasance (WDGAF) - Kool & Kass</li>
+                <li>Jungle - Drake</li>
+            </ul>";
+}
+
+function show_books(){
+    return "<ul>
+                <li>Love in the Time of Cholera - Marquez</li>
+                <li>The Old Man and the Sea - Hemingway</li>
+                <li>The Mahabharata</li>
+            </ul>";
+}

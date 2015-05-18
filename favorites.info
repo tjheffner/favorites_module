@@ -1,0 +1,5 @@
+name = Favorites
+description = Display your favorites. It could be whatever.
+package = Epicodus Examples
+core = 7.x
+files[] = favorites.module
